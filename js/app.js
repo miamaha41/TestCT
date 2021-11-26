@@ -1,4 +1,4 @@
-function maxPairArray(array) {
+function adjacentElementsProduct(array) {
     const n = array.length;
     if (n < 2) {
         console.log("Khong co cap max nao.")
@@ -15,10 +15,10 @@ function maxPairArray(array) {
     }
     console.log(`cặp ${x} và ${y} có tích là ${x*y}`)
 }
-maxPairArray([0])
-maxPairArray([2, 3, -5, -2, -4])
+adjacentElementsProduct([0])
+adjacentElementsProduct([2, 3, -5, -2, -4])
 
-function sumarray(arr) {
+function alternatingSums(arr) {
     const n = arr.length;
     if (n < 2) {
         console.log("mang phai tu 2 phan tu de co 2 team")
@@ -37,8 +37,9 @@ function sumarray(arr) {
     const sum2 = arr2.reduce((acc, curr) => acc += curr)
     console.log(sum1, sum2)
 }
-sumarray([50])
-sumarray([60, 40, 55, 75, 64])
+alternatingSums([50])
+
+alternatingSums([60, 40, 55, 75, 64])
 const button = document.querySelector(".btn");
 const result = document.querySelector(".result");
 const radio1 = document.querySelector("#radio1");
