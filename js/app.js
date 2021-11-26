@@ -17,6 +17,28 @@ function maxPairArray(array) {
 }
 maxPairArray([0])
 maxPairArray([2, 3, -5, -2, -4])
+
+function sumarray(arr) {
+    const n = arr.length;
+    if (n < 2) {
+        console.log("mang phai tu 2 phan tu de co 2 team")
+        return;
+    }
+    let arr1 = [],
+        arr2 = [];
+    for (let i = 0; i < n; i++) {
+        if (i % 2 == 0) {
+            arr1.push(arr[i]);
+        } else {
+            arr2.push(arr[i]);
+        }
+    }
+    const sum1 = arr1.reduce((acc, curr) => acc += curr)
+    const sum2 = arr2.reduce((acc, curr) => acc += curr)
+    console.log(sum1, sum2)
+}
+sumarray([50])
+sumarray([60, 40, 55, 75, 64])
 const button = document.querySelector(".btn");
 const result = document.querySelector(".result");
 const radio1 = document.querySelector("#radio1");
@@ -40,7 +62,6 @@ function renderLink(results) {
 
 function shortLink() {
     const input = document.querySelector("#link-shortener").value.trim();
-    console.log(input)
     if (input) {
         fetch(`https://api.shrtco.de/v2/shorten?url=${input}`).then((response) => response.json()).then(results => renderLink(results));
     } else {

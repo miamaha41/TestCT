@@ -22,8 +22,17 @@ body {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background-color: red;
+  background-color: #ff0000;
   text-align: center;
+}
+
+.app .title {
+  font-size: 30px;
+}
+
+.app .btn:active {
+  color: #000;
+  background-color: green;
 }
 
 .app .radio-toolbar input[type="radio"] {
