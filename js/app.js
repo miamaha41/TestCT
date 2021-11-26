@@ -21,12 +21,17 @@ adjacentElementsProduct([2, 3, -5, -2, -4])
 function alternatingSums(arr) {
     const n = arr.length;
     if (n < 2) {
-        console.log("mang phai tu 2 phan tu de co 2 team")
+        console.log("array phai tu 2 phan tu de co 2 team")
         return;
     }
     let arr1 = [],
-        arr2 = [];
+        arr2 = [],
+        sum = [];
     for (let i = 0; i < n; i++) {
+        if (arr[i] <= 0) {
+            console.log("can nang cua nguoi phai lon hon 0")
+            return;
+        }
         if (i % 2 == 0) {
             arr1.push(arr[i]);
         } else {
@@ -35,10 +40,12 @@ function alternatingSums(arr) {
     }
     const sum1 = arr1.reduce((acc, curr) => acc += curr)
     const sum2 = arr2.reduce((acc, curr) => acc += curr)
-    console.log(sum1, sum2)
+    sum.push(sum1)
+    sum.push(sum2)
+    console.log(sum)
 }
 alternatingSums([50])
-
+alternatingSums([0, 1])
 alternatingSums([60, 40, 55, 75, 64])
 const button = document.querySelector(".btn");
 const result = document.querySelector(".result");
