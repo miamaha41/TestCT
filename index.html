@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>EntranceTestCF</title>
+</head>
+
+<body>
+    <div class="app">
+        <div class="title">
+            Link Shortener
+        </div>
+        <div class="input">
+            <label for="link-shortener">Enter a link :</label>
+            <input id="link-shortener" placeholder="Please enter a link!">
+            <button class="btn"><i class="fas fa-arrow-right"></i></button>
+        </div>
+        <!-- <div class="button-link">
+            <label>Short domain:</label>
+            <button>shrtco.de</button>
+            <button>9qr.de</button>
+            <button>shiny.link</button>
+        </div> -->
+        <div class="group">
+            <label>Short domain:</label>
+            <div class="radio-toolbar">
+                <input type="radio" id="radio1" name="radioLink" value="shrtco.de" checked>
+                <label for="radio1">shrtco.de</label>
+                <input type="radio" id="radio2" name="radioLink" value="9qr.de">
+                <label for="radio2">9qr.de</label>
+                <input type="radio" id="radio3" name="radioLink" value="shiny.link">
+                <label for="radio3">shiny.link</label>
+            </div>
+        </div>
+        <div id="result">
+
+            <a class="result" href=""></a>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

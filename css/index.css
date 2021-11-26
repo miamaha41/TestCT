@@ -1,0 +1,57 @@
+* {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.app {
+  width: 60%;
+  height: 60%;
+  margin: 10% 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: red;
+  text-align: center;
+}
+
+.app .radio-toolbar input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.app .radio-toolbar label {
+  display: inline-block;
+  background-color: #ddd;
+  padding: 10px;
+  font-family: sans-serif, Arial;
+  font-size: 16px;
+  border: 2px solid #444;
+  border-radius: 4px;
+}
+
+.app .radio-toolbar input[type="radio"]:checked + label {
+  background-color: #bfb;
+  border-color: #4c4;
+}
+
+.app .radio-toolbar input[type="radio"]:focus + label {
+  border: 2px dashed #444;
+}
+
+.app .radio-toolbar label:hover {
+  background-color: #dfd;
+}
+/*# sourceMappingURL=index.css.map */
