@@ -41,6 +41,15 @@ body {
   width: 0;
 }
 
+.app .radio-toolbar input[type="radio"]:checked + label {
+  background-color: #bfb;
+  border-color: #4c4;
+}
+
+.app .radio-toolbar input[type="radio"]:focus + label {
+  border: 2px dashed #444;
+}
+
 .app .radio-toolbar label {
   display: inline-block;
   background-color: #ddd;
@@ -49,15 +58,6 @@ body {
   font-size: 16px;
   border: 2px solid #444;
   border-radius: 4px;
-}
-
-.app .radio-toolbar input[type="radio"]:checked + label {
-  background-color: #bfb;
-  border-color: #4c4;
-}
-
-.app .radio-toolbar input[type="radio"]:focus + label {
-  border: 2px dashed #444;
 }
 
 .app .radio-toolbar label:hover {

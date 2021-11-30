@@ -54,7 +54,7 @@ const radio2 = document.querySelector("#radio2");
 const radio3 = document.querySelector("#radio3");
 
 function renderLink(results) {
-    result.style.Color = "rgba(255, 255, 255)"
+    result.style.Color = "rgba(255, 255, 255)";
     if (radio1.checked) {
         result.href = results.result.full_short_link;
         result.innerHTML = results.result.full_short_link;
@@ -73,7 +73,7 @@ function shortLink() {
     if (input) {
         fetch(`https://api.shrtco.de/v2/shorten?url=${input}`).then((response) => response.json()).then(results => renderLink(results));
     } else {
-        alert("Please enter a url!")
+        alert("Please enter a url!");
     }
 }
 
